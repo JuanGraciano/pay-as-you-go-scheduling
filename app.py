@@ -20,6 +20,9 @@ from src.services.payments import formatter_service, parser_service, payments_se
 
 
 def pipeline():
+    """
+    Runs the main thread of the script
+    """
     try:
         data = read(root_files, "test_cases.txt")
 
@@ -30,12 +33,12 @@ def pipeline():
             data_case = parser_service.parser_payments(case)
             data_case_formatted = formatter_service.format_date_hours(data_case)
             payments = payments_service.get_payments_2(data_case_formatted)
+            
             print("Output:\n\t{} USD\n".format(payments))
 
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()
         print(str(e) + " App: pipeline - LINE: " + str(exc_tb.tb_lineno))
-        return 0
 
 if __name__ == "__main__":
     pipeline()

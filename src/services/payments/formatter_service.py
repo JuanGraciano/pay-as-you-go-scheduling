@@ -8,20 +8,19 @@ from src.config import CALENDAR_2, DAY_ABBR
 
 def format_date_hours(hours_worked):
     """
-    Create the query to obtain information from users
+    Takes as input the data parsed by the parser to format dates and times
+    
     Parameters
     ----------
-    gads_client: obj
-        Google Ads client instance
+    hours_worked: dict
+        Employee data previously prepared by the parser
+    
     Returns
     ----------
-    results: dataframe
-        Dataframe with customer search results
+    data: dict
+        Formatted employee data 
     """
-    # hours_worked = {
-    #         "name": "RENE",
-    #         "hours": ["MO10:00-12:00", "TU10:00-12:00", "TH01:00-03:00", "SA14:00-18:00", "SU20:00-21:00"]
-    #     }
+    
     try:
         if len(hours_worked) <= 0:
             raise Exception("A full dictionary is expected")
@@ -56,15 +55,12 @@ def format_date_hours(hours_worked):
 
 def format_payments():
     """
-    Create the query to obtain information from users
-    Parameters
-    ----------
-    gads_client: obj
-        Google Ads client instance
+    Analyzes the configuration file where the data to be paid per hour is stored.
+    
     Returns
     ----------
-    results: dataframe
-        Dataframe with customer search results
+    data: dict
+        Formatted payment schedules
     """
     try:
         payment_formated = {}

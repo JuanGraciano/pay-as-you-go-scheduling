@@ -5,18 +5,20 @@ from os import sys
 
 def parser_payments(string_data):
     """
-    Create the query to obtain information from users
+    Receives as input the raw data from the text file and divides it into sections
+    
     Parameters
     ----------
-    gads_client: obj
-        Google Ads client instance
+    string_data: string
+        Represents a line (case) of the text file
+    
     Returns
     ----------
-    results: dataframe
-        Dataframe with customer search results
+    data: dict
+        Returns the case data in dict format
     """
-    # string_data = "RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00"
     try:
+        string_data = string_data.replace("\n", "")
         split_name_hours = string_data.split("=")
         
         if len(split_name_hours) > 1:

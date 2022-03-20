@@ -4,15 +4,19 @@ from os import sys
 
 def read(file_path, file_name):
     """
-    Create the query to obtain information from users
+    Reads text files
+    
     Parameters
     ----------
-    gads_client: obj
-        Google Ads client instance
+    file_path: string
+        path where the file is located
+    file_name: string
+        file name and extension
+    
     Returns
     ----------
-    results: dataframe
-        Dataframe with customer search results
+    data: list
+        Listing with each line of the file
     """
     try:
         with open("{}/{}".format(file_path, file_name)) as f:
