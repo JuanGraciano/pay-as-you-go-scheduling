@@ -9,35 +9,38 @@ As part of the recruitment process we would like you to solve a programming exer
 ## Project Description
 
 The company ACME offers their employees the flexibility to work the hours they want. They will pay for the hours worked based on the day of the week and time of day, according to the following table:
-Monday - Friday
-00:01 - 09:00 25 USD
-09:01 - 18:00 15 USD
-18:01 - 00:00 20 USD
-Saturday and Sunday
-00:01 - 09:00 30 USD
-09:01 - 18:00 20 USD
-18:01 - 00:00 25 USD
+- Monday - Friday
+    - 00:01 - 09:00 25 USD
+    - 09:01 - 18:00 15 USD
+    - 18:01 - 00:00 20 USD
+- Saturday and Sunday
+    - 00:01 - 09:00 30 USD
+    - 09:01 - 18:00 20 USD
+    - 18:01 - 00:00 25 USD
+
 The goal of this exercise is to calculate the total that the company has to pay an employee, based on the hours they worked and the times during which they worked. The following abbreviations will be used for entering data:
-MO: Monday
-TU: Tuesday
-WE: Wednesday
-TH: Thursday
-FR: Friday
-SA: Saturday
-SU: Sunday
+- MO: Monday
+- TU: Tuesday
+- WE: Wednesday
+- TH: Thursday
+- FR: Friday
+- SA: Saturday
+- SU: Sunday
+
 Input: the name of an employee and the schedule they worked, indicating the time and hours. This should be a .txt file with at least five sets of data. You can include the data from our two examples below.
 Output: indicate how much the employee has to be paid
 For example:
-Case 1:
-INPUT
-RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
-OUTPUT:
-The amount to pay RENE is: 215 USD
-Case 2:
-INPUT
-ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
-OUTPUT:
-The amount to pay ASTRID is: 85 USD
+- Case 1:
+    - INPUT
+        RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00
+    - OUTPUT:
+        The amount to pay RENE is: 215 USD
+
+- Case 2:
+    - INPUT
+        ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
+    - OUTPUT:
+        The amount to pay ASTRID is: 85 USD
 
 ### Technologies
 * Python 3
@@ -64,34 +67,29 @@ The amount to pay ASTRID is: 85 USD
 - ###### config.py file
     - properties:
 
-        * ad_group: Resource for obtaining information on the group
-        * ad_group_ad: Resource for obtaining information on the ad group
-        * campaign: Resource for obtaining information on the campaigns
-        * customer: Resource to obtain information from customers
-        * customer_client: Resource to obtain the list of customers
+        * CALENDAR_1: Represents hourly payments by range of days.
+        * CALENDAR_2: Represents hourly payments for each day.
+        * DAY_ABBR: Represents the abbreviations of the days of the week.
 
 ## Project architecture
 
-* [Use case diagram](https://drive.google.com/file/d/1l9zPTA-c2x_Dto6IRGHP3H9rl_BkKwD4/view?usp=sharing)
-* [Component diagram](https://drive.google.com/file/d/1aJIUuwEGd69RnQi8wIM3wG8wRMDcWnM_/view?usp=sharing)
+* [Use case diagram](https://drive.google.com/file/d/1tVuUBnerbislf-Y7GlZhcZBOgGRZ9wL-/view?usp=sharing)
+* [flow chart](https://drive.google.com/file/d/1F7Ir9vPo56CaaXLeZ07jPEMH7WCBboI3/view?usp=sharing)
+* [Component diagram](https://drive.google.com/file/d/1hJXEp91M0uv45PwL5ZDu4J7D-xylAYyu/view?usp=sharing)
 
 ## Project folder structure
 
 ```
-├──  doc
-    ├──  data ->  Contains the csv files that will be uploaded to AWS.
-    ├──  quick_start.md
+├──  doc ->  Contains the documents describing the architecture and the script.
 ├──  src
-    ├──  apis -> Files with the functionalities of third party services, e.g. Google and Amazon
-        ├──  aws ->  Amazon AWS S3 Features
-        ├──  google_ads: -> Google Ads features
-    ├──  monitoring -> Functionalities to monitor script usage, capture errors and send email alerts 
-    ├──  test -> Functionality test files
-    ├──  utils -> Basic functionalities for reading and writing a csv document 
-    ├──  config.py -> Google ADS Columns configuration file
+    ├──  services -> Contains the required script services.
+    ├──  test -> Contains the tests for each of the services and validate their execution.
+    ├──  utils -> Contains the basic functions of the script.
+    ├──  config.py -> Payments configuration file.
 ├──  app.py -> Main script file. Contains the execution pipeline
 ├──  READMED.md
 ├──  requirements.txt
+├──  test_cases.txt -> File with use cases for testing the script. 
 ```
 
 ## Contributing Members

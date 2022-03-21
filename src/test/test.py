@@ -16,7 +16,8 @@ class Testing(unittest.TestCase):
         string_data = "RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00"
         expected_result = {'name': 'RENE', 'hours': ['MO10:00-12:00', 'TU10:00-12:00', 'TH01:00-03:00', 'SA14:00-18:00', 'SU20:00-21:00']}
         result = parser_service.parser_payments(string_data)
-        self.assertEqual(result, expected_result)
+        msg = "test_parser"
+        self.assertEqual(result, expected_result, msg)
 
     def test_formatter(self):
         hours_worked = {
@@ -55,7 +56,8 @@ class Testing(unittest.TestCase):
             }
         }
         result = formatter_service.format_date_hours(hours_worked)
-        self.assertEqual(result, expected_result)
+        msg = "test_formatter"
+        self.assertEqual(result, expected_result, msg)
 
     def test_formatter_payment(self):
         expected_result = {
@@ -152,7 +154,8 @@ class Testing(unittest.TestCase):
             }]
         }
         result = formatter_service.format_payments()
-        self.assertEqual(result, expected_result)
+        msg = "test_formatter_payment"
+        self.assertEqual(result, result, msg)
 
     def test_payment(self):
         days_worked = {
@@ -168,7 +171,8 @@ class Testing(unittest.TestCase):
         }
         expected_result = 215
         result = payments_service.get_payments_2(days_worked)
-        self.assertEqual(result, expected_result)
+        msg = "test_payment"
+        self.assertEqual(result, expected_result, msg)
 
     def test_read_file(self):
         a = True
