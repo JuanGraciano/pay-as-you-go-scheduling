@@ -53,7 +53,7 @@ For example:
 ## Getting Started
 
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. install requirements. The requirements are in requirements.txt like:
+2. Install requirements. The requirements are in requirements.txt like:
 ```
     pip install -r requirements.txt
 ```
