@@ -95,7 +95,7 @@ Test files were created to validate the functioning of the services.
 
 Below are diagrams that can visually explain the composition of the script:
 * [Use case diagram](https://drive.google.com/file/d/1tVuUBnerbislf-Y7GlZhcZBOgGRZ9wL-/view?usp=sharing)
-* [flow chart](https://drive.google.com/file/d/1F7Ir9vPo56CaaXLeZ07jPEMH7WCBboI3/view?usp=sharing)
+* [Flow chart](https://drive.google.com/file/d/1F7Ir9vPo56CaaXLeZ07jPEMH7WCBboI3/view?usp=sharing)
 * [Component diagram](https://drive.google.com/file/d/1hJXEp91M0uv45PwL5ZDu4J7D-xylAYyu/view?usp=sharing)
 
 ## Project folder structure
@@ -116,7 +116,6 @@ Below are diagrams that can visually explain the composition of the script:
 ### Future improvements
 - Use of regular expressions to capture days and hours.
 - Use of time management libraries to calculate days, hours, minutes and seconds. This in order to be more precise in the calculation of hours.
-- 
 
 ## Contributing Members
 Developer (Contacts) : [Juan Graciano](https://github.com/JuanGraciano)
