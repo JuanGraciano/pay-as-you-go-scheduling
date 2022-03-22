@@ -61,6 +61,10 @@ For example:
 ```
     python app.py
 ```
+4. Run test
+```
+    python -m unittest -v
+```
 
 ## Configurations
 
@@ -73,6 +77,23 @@ For example:
 
 ## Project architecture
 
+For the solution, we try to attend to the main tasks or problems of the exercise. The main tasks are:
+- Receive the input
+- Interrogate the input
+- Identify the hours worked
+- Calculate total payment to each employee
+- Display results
+
+For each of the main tasks, one or more files are created to ensure the granularity of the script. This allows for code enhancements (if necessary) to be made without affecting the work and in an efficient manner.
+
+A folder of services was created with the objective of placing all the services necessary to generate the payment of the employees. Among these services are: 
+- Parser or data entry validator.
+- Formatter or data mediator that is in charge of verifying the data and preparing them to be processed.
+- Payment calculator, this is in charge of calculating the payments to the employee looking for the hours worked per day, calculating the total to be paid per day and finally adding up the total to be paid per day.
+
+Test files were created to validate the functioning of the services.
+
+Below are diagrams that can visually explain the composition of the script:
 * [Use case diagram](https://drive.google.com/file/d/1tVuUBnerbislf-Y7GlZhcZBOgGRZ9wL-/view?usp=sharing)
 * [flow chart](https://drive.google.com/file/d/1F7Ir9vPo56CaaXLeZ07jPEMH7WCBboI3/view?usp=sharing)
 * [Component diagram](https://drive.google.com/file/d/1hJXEp91M0uv45PwL5ZDu4J7D-xylAYyu/view?usp=sharing)
@@ -91,6 +112,11 @@ For example:
 ├──  requirements.txt
 ├──  test_cases.txt -> File with use cases for testing the script. 
 ```
+
+### Future improvements
+- Use of regular expressions to capture days and hours.
+- Use of time management libraries to calculate days, hours, minutes and seconds. This in order to be more precise in the calculation of hours.
+- 
 
 ## Contributing Members
 Developer (Contacts) : [Juan Graciano](https://github.com/JuanGraciano)

@@ -32,9 +32,9 @@ def pipeline():
             
             data_case = parser_service.parser_payments(case)
             data_case_formatted = formatter_service.format_date_hours(data_case)
-            payments = payments_service.get_payments_2(data_case_formatted)
+            payments = payments_service.get_payments(data_case_formatted)
             
-            print("Output:\n\t{} USD\n".format(payments))
+            print("Output:\n\tThe amount to pay {} is: {} USD\n".format(payments["employee"], payments["pay"]))
 
     except Exception as e:
         exc_type, exc_obj, exc_tb = sys.exc_info()

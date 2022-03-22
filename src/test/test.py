@@ -169,7 +169,10 @@ class Testing(unittest.TestCase):
                 "sunday":{"start": 12000, "end": 12100, "hours_worked": 1},
             }
         }
-        expected_result = 215
+        expected_result = {
+            "employee": "RENE",
+            "pay": 215
+        }
         result = payments_service.get_payments_2(days_worked)
         msg = "test_payment"
         self.assertEqual(result, expected_result, msg)

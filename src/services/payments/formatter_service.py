@@ -31,9 +31,7 @@ def format_date_hours(hours_worked):
             day = str(x[:2]).lower()
             if day.isalpha() and day in DAY_ABBR:
                 hours_split = x[2:].split("-")
-                if len(hours_split) > 1: # TODO: hacer funcion para validar splits
-                    # TODO: if start > end :
-                        # print(la hora de comienso debe de ser menor a la hora de salida)
+                if len(hours_split) > 1: 
                     start = int(hours_split[0].replace(":", "")) + 10000
                     end = int(hours_split[1].replace(":", "")) + 10000
                     hours_worked_formated["formatted_hours"][DAY_ABBR[day]] = {
@@ -44,8 +42,7 @@ def format_date_hours(hours_worked):
                 else:
                     raise Exception("""The expected structure is not found. The structure should be '{hour start}-{hour end}'""")
             else:
-                raise Exception("""The expected structure is not found. 
-                    The structure should be '{day abbreviation}={hour start}-{hour end}'""")
+                raise Exception("""The expected structure is not found. The structure should be '{day abbreviation}={hour start}-{hour end}'""")
                 
         return hours_worked_formated
     except Exception as e:
